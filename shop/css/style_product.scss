@@ -1,0 +1,68 @@
+﻿@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+$red: #c43d16;
+$pink: #fd9a7e;
+$grey: #edc596; //237, 197, 150
+$yellow: #fcb500;
+$orange: #dc6d02;
+
+h2 {
+    color: $orange;
+    font-family: Permanent Marker;
+    font-size: 150px;
+}
+
+.price {
+    color: $orange;
+    font-family: Permanent Marker;
+    font-size: 50px;
+}
+
+p {
+    font-family: 'Arial Rounded MT';
+    font-size: 20px;
+}
+
+.buy_btn {
+    background-color: $grey;
+    transition-duration: 0.4s;
+    height: 60px;
+    width: 100px;
+    font-size: 2em;
+    font-family: 'Arial Rounded MT';
+    border: solid 2px $red;
+    border-radius: 13px;
+
+    &:hover {
+        background-color: $red;
+        color: white;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    width: 1400px;
+    padding: 20px;
+    display: flex;
+    justify-content: safe center;
+    border: solid 3px $red;
+    border-radius: 20px;
+}
+
+.img_block {
+    display: flex;
+    align-items: center;
+}
+
+.descr_block {
+    display: flex;
+    flex-wrap: wrap;
+    .priceBuy {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
