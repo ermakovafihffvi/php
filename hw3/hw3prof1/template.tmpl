@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>gallery</title>
+</head>
+<body>
+    <div class="cont dark">
+    <header><h1>Gallery</h1></header>
+    <div class="container">
+        <div class="left_block"></div>
+        <div class="content">
+                {% for item in files %}
+                    <a class="im" href="fullImage.php?img={{ item }}">
+                        <img width="200" src="small/{{ item }}" alt="error">
+                    </a>
+                {% endfor %}
+        </div>
+        <div class="right_block">
+            <form action="server.php" method="post" enctype="multipart/form-data">
+                <p>Choose file</p>
+                <input type="file" name="photo"><br><br>
+                <input type="submit" value="Upload">
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>{{ date }}</p>
+    </footer>
+    </div>
+
+<div class="modal">
+</div>
+</body>
+</html>
