@@ -1,0 +1,115 @@
+﻿@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+.cont {
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.dark{
+    opacity: 1;
+}
+
+.modal {
+    display: none;
+    align-content: center;
+    align-items: center;
+    z-index: 10;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 610px;
+    height: 400px;
+    background-color: white;
+}
+
+$red: #c43d16;
+$pink: #fd9a7e;
+$grey: #edc596; //237, 197, 150
+$yellow: #fcb500;
+$orange: #dc6d02;
+
+h1 {
+    color: $orange;
+    font-family: Permanent Marker;
+    font-size: 50px;
+}
+
+.bigImg {
+    width: 100vw;
+    object-fit: cover;
+    object-position: center;
+    max-width: 6000px;
+}
+
+header, footer, container {
+    border-radius: 25px;
+}
+
+header {
+    height: 100px;
+    background-color: $yellow;
+    padding: 15px;
+    padding-left: 40px;
+    min-height: 100px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+
+    .content {
+        border-radius: 25px;
+        background-color: rgba(237, 197, 150, 0.7);
+        width: 60%;
+        padding: 25px 30px 30px 30px;
+    }
+
+    .box_content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 200px);
+        grid-row-gap: 25px;
+        grid-column-gap: 25px;
+        margin-bottom: 25px;
+
+        /*a {
+            padding: 20px;
+        }*/
+    }
+
+    .load {
+        width: auto;
+        height: 20px;
+    }
+
+    .left_block, .right_block {
+        border-radius: 25px;
+    }
+
+    .left_block {
+        width: 15%;
+        background-color: $pink;
+    }
+    .right_block {
+        width: 25%;
+        background-color: $grey;
+        padding: 20px;
+    }
+}
+
+footer {
+    padding: 15px;
+    display: flex;
+    justify-content: safe center;
+    align-items: center;
+    min-height: 100px;
+    background-color: $red;
+    p {
+        color: aliceblue;
+        font-family: Permanent Marker;
+        font-size: 20px;
+    }
+}

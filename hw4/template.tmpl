@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+    <title>gallery</title>
+</head>
+<body>
+    <div class="cont dark">
+    <header><h1>Gallery</h1></header>
+    <div class="container">
+        <div class="left_block"></div>
+        <div class="content">
+            <div class="box_content">
+                {% for file in files %}
+                    <a class="im" href="fullImage.php?img={{ file.path }}">
+                        <img width="200" src="small/{{ file.path }}" alt="error">
+                    </a>
+                {% endfor %}
+            </div>
+            <button class="load" onclick="load()">Загрузить ещё</button>
+        </div>
+        <div class="right_block">
+            <form action="server.php" method="post" enctype="multipart/form-data">
+                <p>Choose file</p>
+                <input type="file" name="photo"><br><br>
+                <input type="submit" value="Upload">
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>{{ date }}</p>
+    </footer>
+    </div>
+
+<div class="modal">
+</div>
+</body>
+<script src="script.js"></script>
+</html>
